@@ -6,13 +6,24 @@ import android.os.Bundle
 import com.example.componentsexampleapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    /*
+    Активити - это экран с UI, то что видит и с чем работает пользователь.
+    Создаем главную активити и наследуемся от подкласса AppCompatActivity.
+    Для взаимодействия с View подлключаем View Binding.
+     */
     lateinit var binding: ActivityMainBinding
+    /*
+    Функция onCreate вызывается при создании экземпляра подкласса активити.
+    Для того, чтобы предоставить активити UI, нужно вызвать функцию setContentView - она заполнит
+    макет и выведит его на экран.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //Далее добавляем слушатели на кнопки и навигацию по др. активити.
         val intentService = Intent(this, ServiceExampleActivity::class.java)
-        val intentReceiver = Intent(this, ServiceExampleActivity::class.java)
+        val intentReceiver = Intent(this, ReceiverExampleActivity::class.java)
         val intentContentProvider = Intent(this, ServiceExampleActivity::class.java)
         binding.apply {
             serviceButton.setOnClickListener {

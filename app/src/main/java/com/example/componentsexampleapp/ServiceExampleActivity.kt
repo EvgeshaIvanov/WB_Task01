@@ -7,12 +7,15 @@ import com.example.componentsexampleapp.databinding.ActivityServiceExampleBindin
 
 class ServiceExampleActivity : AppCompatActivity() {
 
+    //похожие приложения - Spotify, Soundcloud, Яндекс музыка
+
     lateinit var binding: ActivityServiceExampleBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityServiceExampleBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // добавляем запуск и остановку сервиса на кнопки
         binding.apply {
             playButton.setOnClickListener {
                 startService(Intent(this@ServiceExampleActivity,MyService::class.java))
