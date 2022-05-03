@@ -7,7 +7,7 @@ import com.example.componentsexampleapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     /*
-    Активити - это экран с UI, то что видит и с чем работает пользователь.
+
     Создаем главную активити и наследуемся от подкласса AppCompatActivity.
     Для взаимодействия с View подлключаем View Binding.
      */
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         //Далее добавляем слушатели на кнопки и навигацию по др. активити.
         val intentService = Intent(this, ServiceExampleActivity::class.java)
         val intentReceiver = Intent(this, ReceiverExampleActivity::class.java)
-        val intentContentProvider = Intent(this, ServiceExampleActivity::class.java)
+        val intentContentProvider = Intent(this, ContentProviderExampleActivity::class.java)
         binding.apply {
             serviceButton.setOnClickListener {
                 startActivity(intentService)

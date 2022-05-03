@@ -7,7 +7,7 @@ import com.example.componentsexampleapp.databinding.ActivityServiceExampleBindin
 
 class ServiceExampleActivity : AppCompatActivity() {
 
-    //похожие приложения - Spotify, Soundcloud, Яндекс музыка
+    // приложения - Spotify, Soundcloud, Яндекс музыка
 
     lateinit var binding: ActivityServiceExampleBinding
 

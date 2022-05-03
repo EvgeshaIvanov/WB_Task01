@@ -8,21 +8,27 @@ import android.util.Log
 import com.example.componentsexampleapp.databinding.ActivityReceiverExampleBinding
 
 class ReceiverExampleActivity : AppCompatActivity() {
-    lateinit var binding: ActivityReceiverExampleBinding
+
+    /*
+    Приложения - WhatsApp, Viber, Skype
+    Создаем экземпляр класса приёмника
+     */
+
     lateinit var receiver: MyBroadcastReceiver
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityReceiverExampleBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_receiver_example)
         receiver = MyBroadcastReceiver()
+        //Создаем фильтр на определенное действие и регистрируем приёмник
         IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED).also {
-            registerReceiver(receiver,it)
+            registerReceiver(receiver, it)
         }
     }
 
+    //выключаем приёмник при выходе из активити
     override fun onStop() {
         super.onStop()
         unregisterReceiver(receiver)
-        Log.d("MyLog","приемник выключен")
     }
 }

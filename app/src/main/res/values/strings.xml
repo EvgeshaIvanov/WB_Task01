@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">ComponentsExampleApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hintText">Enter User Name</string>
+    <string name="heading">Content Provider In Android</string>
+    <string name="insertButtontext">Insert Data</string>
+    <string name="loadButtonText">Load Data</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
