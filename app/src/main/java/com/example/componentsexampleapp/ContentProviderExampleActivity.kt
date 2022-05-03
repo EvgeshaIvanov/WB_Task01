@@ -14,8 +14,11 @@ import com.example.componentsexampleapp.databinding.ActivityContentProviderBindi
 
 
 class ContentProviderExampleActivity : AppCompatActivity() {
+    /*
+    Приложения - GetContact, "Контакты +", мессенджеры и др.
+    В данном примере показано получение контактов из телефонной книги.
+     */
 
-    //Приложения - GetContact, "Контакты +", мессенджеры и др.
 
     private lateinit var binding: ActivityContentProviderBinding
 

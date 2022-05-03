@@ -6,8 +6,9 @@ import android.content.Intent
 import android.widget.Toast
 
 class MyBroadcastReceiver : BroadcastReceiver() {
-
-    //Создаем динамичный ресивер (приёмник) и добавляем условие с показом сообщения.
+    /*
+    Создаем динамичный ресивер (приёмник) и добавляем условие с показом сообщения.
+    */
 
     override fun onReceive(context: Context?, intent: Intent?) {
 

@@ -11,9 +11,10 @@ class ReceiverExampleActivity : AppCompatActivity() {
 
     /*
     Приложения - WhatsApp, Viber, Skype
-    Создаем экземпляр класса приёмника
+    При включении/выключении авиа режима будет показываться уведомление
      */
 
+    //Создаем экземпляр класса приёмника
     lateinit var receiver: MyBroadcastReceiver
 
     override fun onCreate(savedInstanceState: Bundle?) {
